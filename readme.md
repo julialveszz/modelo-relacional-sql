@@ -38,7 +38,7 @@ Aluna: Júlia Alves de Jesus
 | name_dog | varchar(50) | Nome do cão. |
 | male_or_female | varchar(10) | Sexo do cão. |
 | belongs_to | varchar(20) | Quem o cão pertence. |
-| id_neutered | integer | Referência ao registro de esterilização na tabela neutered. |
+| id_neutered | integer | Referência ao registro de castração na tabela neutered. |
 | how_long_with_dog | integer | Tempo de convívio com o cão. |
 - **is_your_first_dog** (booleano): Indica se é o primeiro cão.
 - **id_other_pets** (integer): Referência aos outros animais de estimação na tabela other_pets.
@@ -68,7 +68,7 @@ Aluna: Júlia Alves de Jesus
 ### Tabela: why_have_dog
 - **id** (integer): Identificador único do registro (primary key).
 - **company_for_children** (booleano): Cão é companhia para crianças.
-- **company_for_adults** (booleano): Cão é companhia para adultos.
+- **company_for_adults** (booleano): O cachorro é companhia para adultos.
 - **appearance** (booleano): Aparência do cão.
 - **company_for_other_dog** (booleano): Cão é companhia para outro cão.
 - **teaching_responsability** (booleano): Ensina responsabilidade.
@@ -105,8 +105,8 @@ Aluna: Júlia Alves de Jesus
 - **when_stopped_living_together** (varchar(100)): Quando pararam de conviver.
 - **dog_age** (integer): Idade do cão.
 - **why_stopped_living_together** (texto): Razões para parar de conviver.
-- **would_you_live_with_new_dog** (booleano): Viveria com novo cão.
-- **reasons** (texto): Razões.
+- **would_you_live_with_new_dog** (booleano): Viveria com novo cão ou não?
+- **reasons** (texto): Razões pra última pergunta.
 
 ### Tabela: user_personal_infos
 - **id** (integer): Identificador único do registro (primary key).
@@ -139,9 +139,9 @@ housing (varchar(100)): Tipo de moradia.
 ### Tabela: never_had
 - **id** (integer): Identificador único do registro (primary key).
 - **id_users** (integer): Referência ao usuário na tabela users.
-- **dog_coat** (varchar(10)): Tipo de pelo.
-- **color** (varchar(50)): Cor preferida.
-- **size** (varchar(10)): Tamanho preferido.
+- **dog_coat** (varchar(10)): Tipo de pelagem desejada.
+- **color** (varchar(50)): Cor desejada.
+- **size** (varchar(10)): Tamanho desejado.
 - **male_or_female** (varchar(10)): Preferência por sexo.
 - **age** (integer): Idade.
 - **dog_breed** (varchar(50)): Raça preferida.
